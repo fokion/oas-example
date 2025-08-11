@@ -1,0 +1,14 @@
+{
+  "name": "common-openapi",
+  "version": "1.0.0",
+  "description": "Common OpenApi specification.",
+  "scripts": {
+    "build": "redocly bundle specs/openapi.json --output generated/openapi.yaml --ext yaml",
+    "test": "redocly lint generated/openapi.yaml",
+    "html": "redocly build-docs specs/openapi.json --output generated/index.html",
+    "clean": "rm -r generated"
+  },
+  "dependencies": {
+    "@redocly/cli": "^1.14.0"
+  }
+}
