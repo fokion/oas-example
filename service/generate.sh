@@ -92,7 +92,7 @@ docker run --rm \
   -i /local/specs/openapi.json \
   -g spring \
   -c /local/ci/generator/config.json \
-  --import-mappings=$(./ci/util.sh common/specs/openapi.json ${PACKAGE_NAME} import) \
+  --import-mappings=$(./ci/util.sh common/specs/openapi.json  xyz.fokion.common.models import) \
   --openapi-generator-ignore-list "README.md,docs/*.md,src/main/java/org/openapitools/*,gradle*,*.gradle,git_push.sh,build.sbt,.travis.yml,.github,api,.gitignore,$(./ci/util.sh common/specs/openapi.json ${PACKAGE_NAME} ignore)" \
   -o /local
 rm -rf .openapi-generator

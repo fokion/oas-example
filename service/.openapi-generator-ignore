@@ -33,7 +33,6 @@
 docs/*.md
 .gitignore
 gradle*
-src/xyz/fokion/service/models/ErrorIssue.java
 git_push.sh
 .travis.yml
 build.sbt
@@ -41,4 +40,5 @@ api
 src/main/java/org/openapitools/*
 *.gradle
 .github
+src/main/java/xyz/fokion/service/models/ErrorIssue.java
 README.md

@@ -116,7 +116,7 @@ generate_output_for_ignoring() {
 
     while IFS= read -r schema_name; do
         if [[ -n "$schema_name" ]]; then
-            output+=("src/${directory}/${schema_name}.java")
+            output+=("src/main/java/${directory}/${schema_name}.java")
         fi
     done
 
