@@ -1,0 +1,14 @@
+{
+  "name": "service-openapi",
+  "version": "0.1.0",
+  "description": "Service OpenApi specification.",
+  "scripts": {
+    "build": "redocly bundle specs/openapi.json --output generated/openapi.yaml --ext yaml",
+    "test": "redocly lint generated/openapi.yaml",
+    "html": "redocly build-docs specs/openapi.json --output generated/index.html",
+    "clean": "rm -r generated"
+  },
+  "dependencies": {
+    "@redocly/cli": "^1.14.0"
+  }
+}
