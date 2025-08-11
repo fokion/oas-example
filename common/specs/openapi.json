@@ -1,0 +1,46 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "description": "OpenAPI Specification for common models.",
+    "title": "Common models",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Fokion",
+      "url": "https://fokion.online",
+      "email": ""
+    }
+  },
+  "paths": {
+  },
+  "components": {
+    "schemas": {
+      "ErrorIssue": {
+        "required": [
+          "type",
+          "code"
+        ],
+        "type": "object",
+        "description": "Detailed information regarding the issue that was experienced during processing of the request",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Category of the issue"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Code that uniquely identifies the type of issue"
+          },
+          "parameter": {
+            "type": "string",
+            "description": "Identfies the parameter / property within the request (headers, query parameters or body) that the issue relates to. For headers and query parameters, it refers to the parameter name. For the body, it refers to the JSONPath of the property"
+          },
+          "message": {
+            "type": "string",
+            "description": "Human readable description of the issue that was experienced"
+          }
+    
+        }
+      }
+    }
+  }
+}
