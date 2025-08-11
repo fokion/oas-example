@@ -2,3 +2,4 @@ common
 .openapi-generator
 target
 src
+generated
