@@ -1,0 +1,23 @@
+{
+  "apiPackage": "xyz.fokion.service.api",
+  "modelPackage": "xyz.fokion.service.models",
+  "openApiNullable": false,
+  "useTags": false,
+  "useOptional": true,
+  "reactive": false,
+  "annotationLibrary": "none",
+  "documentationProvider": "none",
+  "groupId": "xyz.fokion.models",
+  "interfaceOnly": true,
+  "dateLibrary": "java8",
+  "useBeanValidation": true,
+  "artifactId": "service-model",
+  "serializableModel": true,
+  "hideGenerationTimestamp": true,
+  "enablePostProcessFile": true,
+  "useJakartaEe": true,
+  "spring-cloud": true,
+  "beanQualifiers": true,
+  "useSpringBoot3": true,
+  "artifactVersion": "0.1.0"
+}

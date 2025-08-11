@@ -1,0 +1,82 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "description": "OpenAPI Specification for Service",
+    "title": "Service A",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Fokion",
+      "url": "https://fokion.online",
+      "email": ""
+    }
+  },
+  "paths": {
+    "/items": {
+      "get": {
+        "description": "Get item list",
+        "operationId": "getItems",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json;charset=UTF-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemsResponse"
+                }
+              }
+            },
+            "description": "Ok"
+          },
+          "500": {
+            "content": {
+              "application/json;charset=UTF-8": {
+                "schema": {
+                  "$ref": "../common/specs/openapi.json#/components/schemas/ErrorIssue"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ItemsResponse": {
+        "type": "object",
+        "writeOnly": true,
+        "required": [
+          "meta",
+          "items"
+        ],
+        "properties": {
+          "items": {
+            "type": "array",
+            "writeOnly": true,
+            "items": {
+              "$ref": "#/components/schemas/Item"
+            }
+          }
+        }
+      },
+      "Item": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "icon"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
